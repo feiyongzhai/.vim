@@ -8,7 +8,7 @@ nn S :w<CR>
 
 let mapleader = ' '
 nn <leader>q :q<CR>
-nn <leader>r :source %<CR>
+nn <leader>r :source $MYVIMRC<CR>
 nn <leader>ec :e $MYVIMRC<CR>
 
 set incsearch
@@ -21,7 +21,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'yianwillis/vimcdoc'
 "Plug 'iamcco/markdown-preview.nvim'
 call plug#end()
 
