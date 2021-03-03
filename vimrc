@@ -35,7 +35,7 @@ let g:vimwiki_list = [{'path': '~/Nutstore Files/vimwiki/',
 " ===
 " === configs for fzf
 " ===
-nn <C-f> :FZF<CR>
+nn <C-f> :Lines<CR>
 nn <leader>ff :FZF<CR>
 nn <leader>fr :Rg<CR>
 nn <leader>fg :GFiles<CR>
