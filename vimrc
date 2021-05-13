@@ -10,14 +10,26 @@ let mapleader = ' '
 nn <leader>q :q<CR>
 nn <leader>r :source $MYVIMRC<CR>
 nn <leader>ec :e $MYVIMRC<CR>
+nn <leader>gl :GV<CR>
+nn <leader>s :terminal<CR>
+nn <leader>tn :tabnew<CR>
 
 set incsearch
 set ignorecase
 set smartcase
+set fileencodings=utf-8,gbk
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'humiaozuzu/fcitx-status'
+"Plug 'airblade/vim-gitgutter'
+"highlight! link SignColumn LineNr
+"highlight SignColumn guibg=darkgrey
+"Plug 'liuchengxu/vim-which-key'
+"Plug 'lilydjwg/fcitx.vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
