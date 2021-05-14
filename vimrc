@@ -7,12 +7,13 @@ nn Q :q<CR>
 nn S :w<CR>
 
 let mapleader = ' '
-nn <leader>q :q<CR>
-nn <leader>r :source $MYVIMRC<CR>
-nn <leader>ec :e $MYVIMRC<CR>
-nn <leader>gl :GV<CR>
-nn <leader>s :terminal<CR>
-nn <leader>tn :tabnew<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>ec :e $MYVIMRC<CR>
+nnoremap <leader>gl :GV<CR>
+nnoremap <leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 set incsearch
 set ignorecase
@@ -25,8 +26,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'humiaozuzu/fcitx-status'
-"Plug 'airblade/vim-gitgutter'
-"highlight! link SignColumn LineNr
+Plug 'osyo-manga/vim-anzu'
+Plug 'preservim/nerdtree'
+Plug 'airblade/vim-gitgutter'
+highlight! link SignColumn LineNr
 "highlight SignColumn guibg=darkgrey
 "Plug 'liuchengxu/vim-which-key'
 "Plug 'lilydjwg/fcitx.vim'
@@ -56,6 +59,14 @@ nn <leader>fb :Buffers<CR>
 nn <leader>fl :Lines<CR>
 nn <leader>fm :Marks<CR>
 nn <leader>fw :Windows<CR>
+
+" ===
+" === configs for anzu
+" ===
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
 
 "Mode Settings
 
