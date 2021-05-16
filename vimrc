@@ -33,6 +33,9 @@ highlight! link SignColumn LineNr
 "highlight SignColumn guibg=darkgrey
 "Plug 'liuchengxu/vim-which-key'
 "Plug 'lilydjwg/fcitx.vim'
+Plug 'szw/vim-g'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
@@ -40,6 +43,11 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'yianwillis/vimcdoc'
 "Plug 'iamcco/markdown-preview.nvim'
 call plug#end()
+
+if has("gui_running")
+	set guioptions-=T
+	set guifont=Hack\ 12
+endif
 
 " ===
 " === configs for vimwiki
@@ -67,6 +75,17 @@ nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
 nmap * <Plug>(anzu-star-with-echo)
 nmap # <Plug>(anzu-sharp-with-echo)
+
+" ===
+" === configs for vim-g
+" ===
+nn <leader>gg :Google 
+let g:vim_g_open_command = "firefox"
+
+" ===
+" === configs for fzf
+" ===
+noremap Y "+y
 
 "Mode Settings
 
