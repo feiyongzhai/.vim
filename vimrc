@@ -21,6 +21,14 @@ set smartcase
 set fileencodings=utf-8,gbk
 
 call plug#begin('~/.vim/plugged')
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
+let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'}
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
