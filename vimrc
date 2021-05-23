@@ -5,13 +5,14 @@ nn ; :
 nn : ;
 nn Q :q<CR>
 nn S :w<CR>
+noremap Y "+y
 
 let mapleader = ' '
 nnoremap <leader>q :q<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>ec :e $MYVIMRC<CR>
 nnoremap <leader>gl :GV<CR>
-nnoremap <leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+nnoremap <leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR && clear<CR>
 nnoremap <leader>tn :tabnew<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 
@@ -43,7 +44,7 @@ highlight! link SignColumn LineNr
 "Plug 'liuchengxu/vim-which-key'
 "Plug 'lilydjwg/fcitx.vim'
 Plug 'szw/vim-g'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/fzf.vim'
