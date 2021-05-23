@@ -30,6 +30,7 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'vimwiki/vimwiki'
@@ -91,9 +92,10 @@ nn <leader>gg :Google
 let g:vim_g_open_command = "firefox"
 
 " ===
-" === configs for fzf
+" === configs for airline
 " ===
-noremap Y "+y
+let g:airline_theme='jellybeans'
+let g:airline#extensions#whitespace#enabled = 0
 
 "Mode Settings
 
