@@ -22,36 +22,30 @@ set smartcase
 set fileencodings=utf-8,gbk
 
 call plug#begin('~/.vim/plugged')
-Plug 'lervag/vimtex'
-let g:tex_flavor='latex'
-let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
-let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'}
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
+" UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" git
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'airblade/vim-gitgutter'
+" note
 Plug 'vimwiki/vimwiki'
+" ime
 Plug 'humiaozuzu/fcitx-status'
+"Plug 'lilydjwg/fcitx.vim'
+" 搜索增强
 Plug 'osyo-manga/vim-anzu'
 Plug 'preservim/nerdtree'
-Plug 'airblade/vim-gitgutter'
-highlight! link SignColumn LineNr
-"highlight SignColumn guibg=darkgrey
-"Plug 'liuchengxu/vim-which-key'
-"Plug 'lilydjwg/fcitx.vim'
+" 谷歌搜索
 Plug 'szw/vim-g'
-"Plug 'ctrlpvim/ctrlp.vim'
+" 编辑增强
 Plug 'tpope/vim-surround'
-Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" 中文帮助文档
 Plug 'yianwillis/vimcdoc'
-"Plug 'iamcco/markdown-preview.nvim'
 call plug#end()
 
 if has("gui_running")
@@ -60,13 +54,13 @@ if has("gui_running")
 endif
 
 " ===
-" === configs for vimwiki
+" === vimwiki
 " ===
 let g:vimwiki_list = [{'path': '~/Nutstore Files/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " ===
-" === configs for fzf
+" === fzf
 " ===
 nn <C-f> :Lines<CR>
 nn <leader>ff :FZF<CR>
@@ -79,7 +73,7 @@ nn <leader>fm :Marks<CR>
 nn <leader>fw :Windows<CR>
 
 " ===
-" === configs for anzu
+" === anzu
 " ===
 nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
@@ -87,16 +81,21 @@ nmap * <Plug>(anzu-star-with-echo)
 nmap # <Plug>(anzu-sharp-with-echo)
 
 " ===
-" === configs for vim-g
+" === vim-g
 " ===
 nn <leader>gg :Google 
 let g:vim_g_open_command = "firefox"
 
 " ===
-" === configs for airline
+" === airline
 " ===
 let g:airline_theme='jellybeans'
 let g:airline#extensions#whitespace#enabled = 0
+
+" ===
+" === vim-gitgutter
+" ===
+highlight! link SignColumn LineNr
 
 "Mode Settings
 
