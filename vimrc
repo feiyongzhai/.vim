@@ -1,10 +1,10 @@
 source $VIMRUNTIME/defaults.vim
-"Key Tweaks
-"exchange ; and :
-nn ; :
-nn : ;
-nn Q :q<CR>
-nn S :w<CR>
+
+" Keys
+nnoremap ; :
+nnoremap : ;
+nnoremap Q :q<CR>
+nnoremap S :w<CR>
 noremap Y "+y
 
 let mapleader = ' '
@@ -14,8 +14,10 @@ nnoremap <leader>ec :e $MYVIMRC<CR>
 nnoremap <leader>gl :GV<CR>
 nnoremap <leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR && clear<CR>
 nnoremap <leader>tn :tabnew<CR>
-nnoremap <leader>n :NERDTreeFocus<CR>
 
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Vars
 set incsearch
 set ignorecase
 set smartcase
@@ -28,7 +30,6 @@ Plug 'vim-airline/vim-airline-themes'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'airblade/vim-gitgutter'
 " note
 Plug 'vimwiki/vimwiki'
 " ime
@@ -51,6 +52,7 @@ call plug#end()
 if has("gui_running")
 	set guioptions-=T
 	set guifont=Hack\ 12
+	colorscheme desert
 endif
 
 " ===
@@ -62,13 +64,12 @@ let g:vimwiki_list = [{'path': '~/Nutstore Files/vimwiki/',
 " ===
 " === fzf
 " ===
-nn <C-f> :Lines<CR>
+nn <C-p> :Lines<CR>
 nn <leader>ff :FZF<CR>
 nn <leader>fr :Rg<CR>
 nn <leader>fg :GFiles<CR>
 nn <leader>fh :History<CR>
 nn <leader>fb :Buffers<CR>
-nn <leader>fl :Lines<CR>
 nn <leader>fm :Marks<CR>
 nn <leader>fw :Windows<CR>
 
@@ -84,18 +85,13 @@ nmap # <Plug>(anzu-sharp-with-echo)
 " === vim-g
 " ===
 nn <leader>gg :Google 
-let g:vim_g_open_command = "firefox"
+let g:vim_g_open_command = "xdg-open"
 
 " ===
 " === airline
 " ===
 let g:airline_theme='jellybeans'
 let g:airline#extensions#whitespace#enabled = 0
-
-" ===
-" === vim-gitgutter
-" ===
-highlight! link SignColumn LineNr
 
 "Mode Settings
 
