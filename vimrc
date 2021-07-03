@@ -1,11 +1,11 @@
 source $VIMRUNTIME/defaults.vim
 
 " Keys
-nnoremap ; :
-nnoremap : ;
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
 noremap Y "+y
+noremap ; :
+noremap : ;
 
 let mapleader = ' '
 nnoremap <leader>q :q<CR>
@@ -17,12 +17,13 @@ nnoremap <leader>tn :tabnew<CR>
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-" Vars
+" Settings
 set incsearch
 set ignorecase
 set smartcase
 set fileencodings=utf-8,gbk
 
+" Plugins
 call plug#begin('~/.vim/plugged')
 " UI
 Plug 'vim-airline/vim-airline'
