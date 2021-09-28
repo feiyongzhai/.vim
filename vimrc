@@ -25,6 +25,7 @@ set fileencodings=utf-8,gbk
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -61,6 +62,12 @@ endif
 " ===
 let g:vimwiki_list = [{'path': '~/Nutstore Files/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" ===
+" === EasyAlign
+" ===
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 " ===
 " === fzf
