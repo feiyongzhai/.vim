@@ -4,8 +4,8 @@ source $VIMRUNTIME/defaults.vim
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
 noremap Y "+y
-noremap ; :
-noremap : ;
+"noremap ; :
+"noremap : ;
 
 let mapleader = ' '
 nnoremap <leader>q :q<CR>
