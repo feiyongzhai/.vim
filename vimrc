@@ -49,7 +49,13 @@ Plug 'junegunn/fzf'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " 中文帮助文档
 Plug 'yianwillis/vimcdoc'
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
 call plug#end()
+
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 if has("gui_running")
 	set guioptions-=T
@@ -72,7 +78,7 @@ xmap ga <Plug>(EasyAlign)
 " ===
 " === fzf
 " ===
-nn <C-p> :Lines<CR>
+nn <C-p> :FZF<CR>
 nn <leader>ff :FZF<CR>
 nn <leader>fr :Rg<CR>
 nn <leader>fg :GFiles<CR>
