@@ -3,7 +3,7 @@ source $VIMRUNTIME/defaults.vim
 " Keys
 nnoremap Q :q<CR>
 " 这个配置和 vim-rt-format 会冲突
-" nnoremap S :w<CR>
+nnoremap S :w<CR>
 noremap Y "+y
 "noremap ; :
 "noremap : ;
@@ -52,7 +52,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'yianwillis/vimcdoc'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-Plug 'skywind3000/vim-rt-format', { 'do': 'pip3 install autopep8' }
+Plug 'feiyongzhai/vim-rt-format', { 'do': 'pip3 install autopep8' }
 call plug#end()
 
 let g:rtf_ctrl_enter = 0
