@@ -12,6 +12,7 @@ let mapleader = ' '
 nnoremap <leader>q :q<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>ec :e $MYVIMRC<CR>
+nnoremap <leader>ee :e ~/.emacs.d/init.el<CR>
 nnoremap <leader>gl :GV<CR>
 nnoremap <leader>s :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR && clear<CR>
 nnoremap <leader>tn :tabnew<CR>
