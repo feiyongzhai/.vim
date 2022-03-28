@@ -29,7 +29,7 @@ set fileencodings=utf-8,gbk
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 " UI
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " git
 Plug 'tpope/vim-fugitive'
@@ -133,3 +133,5 @@ let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 "let &t_SI = "\<Esc>]60;CursorShape=1\x7"
 "let &t_SR = "\<Esc>]60;CursorShape=2\x7"
 "let &t_EI = "\<Esc>]60;CursorShape=0\x7"
+
+set timeoutlen=1500
