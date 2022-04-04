@@ -65,7 +65,7 @@ let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 if has("gui_running")
-	set guioptions-=T
+	"set guioptions-=T	"关闭 tool-bar
 	set guifont=Hack\ 12
 	colorscheme desert
 endif
